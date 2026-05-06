@@ -1,6 +1,6 @@
-"use client";
 
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ShieldCheck, 
@@ -29,7 +29,7 @@ const SIPEMASAuth = () => {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } as const
     }
   };
 
@@ -178,15 +178,7 @@ const SIPEMASAuth = () => {
         </footer>
       </motion.div>
 
-      <style jsx global>{`
-        @keyframes gradient-x {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient-x {
-          animation: gradient-x 6s linear infinite;
-        }
-      `}</style>
+      
     </div>
   );
 };
